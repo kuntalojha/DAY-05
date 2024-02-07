@@ -16,15 +16,12 @@ const getQuotes = async (req, res) => {
     if (alldata.length == 0) {
       res.send("No record found!");
     } else if (alldata.length != 0) {
-      res.send(alldata); // you also can yse res.json
+      res.send(alldata);
     }
   } catch (error) {
-    console.error(error);
+    console.log(error);
     res.status(500).json("Internal server error.");
   }
 };
 
-// export default { getQuotes };
 module.exports = { getQuotes };
-
-// module.exports = { getQuotes };

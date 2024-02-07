@@ -7,7 +7,7 @@
 
 // quotes.cjs
 const router = require("express").Router();
-const controller = require("../controller/quotes.cjs").default;
+const controller = require("../controller/quotes.cjs");
 
 router.get("/getQuotes", controller.getQuotes);
 
